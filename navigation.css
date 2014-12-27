@@ -55,14 +55,15 @@
     position: absolute;
     top: 55px;
     right: 0;
-    left: -9999px;
+    left: 0;
     opacity: 0;
+    visibility: hidden;
 
-    -webkit-transition: left 0ms linear 200ms, opacity 200ms linear;
-    -moz-transition: left 0ms linear 200ms, opacity 200ms linear;
-    -ms-transition: left 0ms linear 200ms, opacity 200ms linear;
-    -o-transition: left 0ms linear 200ms, opacity 200ms linear;
-    transition: left 0ms linear 200ms, opacity 200ms linear;
+    -webkit-transition: visibility 0ms linear 200ms, opacity 200ms linear;
+    -moz-transition: visibility 0ms linear 200ms, opacity 200ms linear;
+    -ms-transition: visibility 0ms linear 200ms, opacity 200ms linear;
+    -o-transition: visibility 0ms linear 200ms, opacity 200ms linear;
+    transition: visibility 0ms linear 200ms, opacity 200ms linear;
 }
 
 #mobile-nav .nav-item {
@@ -126,8 +127,14 @@
 }
 
 #open-toggle:focus ~ #mobile-nav {
-    left: 0;
+    visibility: visible;
     opacity: 1;
+
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
 }
 
 
